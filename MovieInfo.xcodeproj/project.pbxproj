@@ -19,6 +19,7 @@
 		8BA3C3202234E0D300DD11C1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3C31F2234E0D300DD11C1 /* Movie.swift */; };
 		8BA3C3232234E11300DD11C1 /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3C3222234E11300DD11C1 /* MovieStore.swift */; };
 		8BA3C3252234E15400DD11C1 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3C3242234E15400DD11C1 /* MovieService.swift */; };
+		8BA3C3332238162700DD11C1 /* UISegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3C3322238162700DD11C1 /* UISegmentedControl+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8BA3C31F2234E0D300DD11C1 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8BA3C3222234E11300DD11C1 /* MovieStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
 		8BA3C3242234E15400DD11C1 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		8BA3C3322238162700DD11C1 /* UISegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				4601DAB847F2CECF9E5F3266 /* Pods-MovieInfo.debug.xcconfig */,
 				479B5323C1C83A3D21FFDF46 /* Pods-MovieInfo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +84,7 @@
 		8BA3C3002234D68B00DD11C1 /* MovieInfo */ = {
 			isa = PBXGroup;
 			children = (
+				8BA3C3312238161B00DD11C1 /* Extension */,
 				8BA3C3012234D68B00DD11C1 /* AppDelegate.swift */,
 				8BA3C31A2234DDC300DD11C1 /* Cells */,
 				8BA3C3182234DD1000DD11C1 /* Models */,
@@ -145,6 +147,14 @@
 				8BA3C3242234E15400DD11C1 /* MovieService.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8BA3C3312238161B00DD11C1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8BA3C3322238162700DD11C1 /* UISegmentedControl+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		AF53F844D39E149C0FA07B4B /* Frameworks */ = {
@@ -276,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA3C3332238162700DD11C1 /* UISegmentedControl+Extension.swift in Sources */,
 				8BA3C3022234D68B00DD11C1 /* AppDelegate.swift in Sources */,
 				8BA3C3142234D8E300DD11C1 /* MovieListViewController.swift in Sources */,
 				8BA3C3232234E11300DD11C1 /* MovieStore.swift in Sources */,

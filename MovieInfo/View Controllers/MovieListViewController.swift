@@ -14,6 +14,7 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     let dateFormatter: DateFormatter = {
         $0.dateStyle = .medium
@@ -37,6 +38,7 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        segmentedControl.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
         setupTableView()
         fetchMovies()
     }
@@ -63,7 +65,7 @@ class MovieListViewController: UIViewController {
         tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
     }
     
-    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+    @objc func segmentChanged(_ sender: UISegmentedControl) {
         endpoint = sender.endpoint
     }
 }
@@ -91,17 +93,5 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.ratingLabel.text = ratingText
 
         return cell
-    }
-}
-
-fileprivate extension UISegmentedControl {
-    
-    var endpoint: Endpoint {
-        switch self.selectedSegmentIndex {
-        case 0: return .nowPlaying
-        case 1: return .popular
-        case 2: return .upcoming
-        default: fatalError()
-        }
     }
 }
